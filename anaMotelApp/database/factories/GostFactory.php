@@ -17,7 +17,9 @@ class GostFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'ime' => fake()->firstName(),
+            'prezime' => fake()->lastName(),
+            'br_lk' => fake()->numerify('###########'),
         ];
     }
 }

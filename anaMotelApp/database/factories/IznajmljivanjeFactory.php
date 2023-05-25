@@ -17,7 +17,10 @@ class IznajmljivanjeFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'gost_id' => random_int(1, Gost::count()),
+            'soba_id' => random_int(1, Soba::count()),
+            'datum_od' => fake()->date($format = 'Y-m-d', $max = 'now'),
+            'datum_do' => fake()->date($format = 'Y-m-d', $max = 'now'),
         ];
     }
 }

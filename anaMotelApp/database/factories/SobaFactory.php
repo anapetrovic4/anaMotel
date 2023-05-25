@@ -17,7 +17,8 @@ class SobaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'kapacitet' => fake()->numberBetween($min = 1, $max = 10),
+            'broj_sobe' => fake()->numberBetween($min = 100, $max = 600),
         ];
     }
 }
