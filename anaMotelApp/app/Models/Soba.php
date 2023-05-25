@@ -10,7 +10,7 @@ class Soba extends Model
     use HasFactory;
 
     protected $fillable = [
-        'broj_ljudi',
+        'kapacitet',
         'broj_sobe',
     ];
 
