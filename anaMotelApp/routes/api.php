@@ -18,9 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/gosti', [GostController::class,'index']);
 Route::get('/gosti/{id}', [GostController::class,'show']);
+Route::delete('/gosti/{id}', [GostController::class,'destroy']);
+Route::post('/gosti', [GostController::class,'store']);
+Route::put('/gosti/{id}', [GostController::class,'update']);
+
 
 Route::get('/renta', [IznajmljivanjeController::class,'index']);
 Route::get('/renta/{id}', [IznajmljivanjeController::class,'show']);
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
